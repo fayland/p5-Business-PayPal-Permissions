@@ -21,12 +21,6 @@ use Digest::HMAC_SHA1 'hmac_sha1';
         signature => $cfg{signature}, sandbox => 1,
     );
 
-    my @ProfileIds = $cim->getCustomerProfileIds();
-    foreach my $id (@ProfileIds) {
-        my $d = $cim->getCustomerProfile($id);
-        print Dumper(\$d);
-    }
-
 =head1 DESCRIPTION
 
 PayPal Permissions L<https://www.x.com/developers/paypal/documentation-tools/permissions/permissions-service>
